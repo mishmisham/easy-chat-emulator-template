@@ -1,0 +1,27 @@
+
+$maxBodyWidth: 1200px;
+$defaultFontFamily: Helvetica, Arial, sans-serif;
+
+$background: #1d0c35;
+
+$textColor: #b0b5cc;
+$selectedTextColor: darken($textColor, 10);
+$darkTextColor: #070e17;
+
+$itemBorderColor: rgb(44, 43, 81);
+
+$hoverAnimationSpeed: .15s ease-in-out;
+
+$defaultBorderRadius: 12px;
+$elemBorderRadius: 4px;
+$defaultHorizontalMargin: 8px;
+
+@mixin flexbox($direction: row, $justify: center, $align: center, $width: 100%) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  align-content: $align;
+  flex-direction: $direction;
+  width: $width;
+}
+ 

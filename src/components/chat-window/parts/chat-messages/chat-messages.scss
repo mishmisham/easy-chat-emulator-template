@@ -1,0 +1,7 @@
+@import '@/styles/variables.scss';
+
+.chat-messages {
+    @include flexbox(column, flex-start);
+    padding: 16px 8px;
+    
+}

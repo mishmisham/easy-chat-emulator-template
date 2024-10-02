@@ -1,0 +1,34 @@
+@import '@/styles/variables.scss';
+
+.chat-window {
+    @include flexbox(column, space-between);
+    border: 1px solid $itemBorderColor;
+    border-radius: $defaultBorderRadius;
+
+    &_header {
+        @include flexbox();
+        border-bottom: 1px solid $itemBorderColor;
+    }
+
+    &_body {
+        @include flexbox(column, flex-start, flex-start);
+        margin: 0 0 auto;
+        height: 400px;
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        &-inner {
+            @include flexbox(column, flex-start, flex-start);
+            margin: 0 0 auto;
+            height: auto;
+        }
+    }
+
+    &_footer {
+        @include flexbox();
+        margin: auto 0 0;
+        padding: 16px 8px 16px;
+        border-top: 1px solid $itemBorderColor;
+    }
+}

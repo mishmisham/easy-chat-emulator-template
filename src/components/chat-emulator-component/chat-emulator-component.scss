@@ -1,0 +1,12 @@
+@import '@/styles/variables.scss';
+
+.chat-emulator-component {
+    @include flexbox(row, space-between);
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    .chat-window {
+        min-width: 300px;
+        width: calc(50% - $defaultHorizontalMargin);
+    }
+}

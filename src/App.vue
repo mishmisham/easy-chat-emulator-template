@@ -1,26 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div class="page">
+  <chat-emulator-component/>
+</div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import ChatEmulatorComponent from '@/components/chat-emulator-component/ChatEmulatorComponent.vue'
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import '@/styles/defaults.scss';
+
+.page {
+  @include flexbox();
+  width: calc(100% - 48px);
+  max-width: $maxBodyWidth;
+  margin: auto;
 }
 </style>

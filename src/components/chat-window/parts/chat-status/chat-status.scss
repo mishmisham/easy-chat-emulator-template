@@ -1,0 +1,9 @@
+@import '@/styles/variables.scss';
+
+.chat-status {
+    @include flexbox();
+    height: 36px;
+    font-size: 12px;
+    font-weight: 600;
+    color: darken($textColor, 50);
+}

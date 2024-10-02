@@ -1,0 +1,109 @@
+@import '@/styles/variables.scss';
+
+.chat-message-item {
+    @include flexbox(column, flex-start);
+    width: calc(100% - 30%);
+    border-radius: $defaultBorderRadius;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+
+    &--current {
+        margin: 0 8px 20px auto;
+        background: #25133c;
+
+        .chat-message-item_content-user {
+            margin: auto 0 auto auto;
+            justify-content: flex-end;
+        }
+        .chat-message-item_content-user-avatar {
+            order: 2;
+            margin: auto 0 auto 8px;
+        }
+        .chat-message-item_content-user-name {
+            order: 1;
+        }
+    }
+
+    &--companion {
+        margin: 0 auto 20px 8px;
+        background: #2a1648;
+    }
+
+    &_content {
+        @include flexbox(column, flex-start);
+        padding: 8px;
+        box-shadow: 0 0 8px rgba(0,0,0,.15) inset;
+        overflow: hidden;
+        border-radius: 12px;
+
+        &-header {
+            @include flexbox(row, flex-start);
+            margin-bottom: 8px;
+        }
+
+        &-user {
+            @include flexbox(row, flex-start);
+            position: relative;
+
+            &-avatar {
+                position: relative;
+
+                &-image {
+                    width: 26px;
+                    height: 26px;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    border: 2px solid $itemBorderColor;
+
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        min-height: 100%;
+                    }
+                }
+            }
+
+            &-online {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 8px;
+                height: 8px;
+                background: rgb(74, 204, 4);
+                border-radius: 50%;
+                box-shadow: 0 0 4px rgba(4, 11, 0, 0.95);
+            }
+
+            &-name {
+                font-weight: 600;
+                font-size: 14px;
+                color: $selectedTextColor;
+                margin-left: 8px;
+            }
+        }
+
+        &-body {
+            @include flexbox(column);
+            
+            &-text {
+                @include flexbox(row, flex-start, flex-start);
+                font-weight: 400;
+                font-size: 14px;
+                text-align: left;
+                padding: 8px 8px 0;
+                line-height: 21px;
+            }
+        }
+
+        &-footer {
+            @include flexbox(column);
+
+            &-date {
+                @include flexbox(row, flex-end);
+                font-size: 12px;
+                font-weight: 300;
+                font-style: italic;
+            }
+        }
+    }
+}
